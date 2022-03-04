@@ -414,45 +414,19 @@ from{
   font-size: 2rem;
   margin-bottom: 1rem;
   margin-left: -20px;
-
 }
+
 
 .columns{
   width: 100%;
   height: 100%;
-  align-items: flex-start;
-  border-left : 1px solid white;
-
+  border-left: 1px solid #fff;
 }
 
 .column{
   width: 50%;
+  border: 1px solid gold;
   height: 100%;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
-.skil-name{
-  width: 40%;
-  padding: 0.5rem;
-  padding-left: 2rem;
-  justify-content: flex-start;
-}
-
-.skil-name p{
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.skil-knowladge{
-  width: 40%;
-  padding: 0.1rem 2rem;
-  justify-content: flex-start;
-}
-
-
-
-.stars .iconify{
-  font-size: 2rem;
-  color: #AAAAAA;
-}
+/* <span class="iconify" data-icon="ant-design:star-filled"></span> */
