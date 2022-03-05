@@ -401,12 +401,18 @@ from{
 .skils{
   flex-direction: column;
   width: 100%;
-  height: 600px;
+  height: auto;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 0 2rem;
+  margin-bottom: 1rem;
   
 }
+
+.language{
+  height: auto;
+}
+
 
 .skils h2{
   color: #007ced;
@@ -421,6 +427,8 @@ from{
   width: 100%;
   height: 100%;
   border-left: 1px solid #fff;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .column{
@@ -435,12 +443,12 @@ from{
   margin-bottom: 0.5rem;
 }
 
-.skil-name {
+.skil-name, .tool-name {
   width: 40%;
  padding-left: 2rem;
 }
 
-.skil-name p{
+.skil-name p, .tools p{
   font-size: 1.4rem;
   color: #dfdede
  }
@@ -454,3 +462,21 @@ from{
   color: #dfdede;
   margin:0 0.2rem;
 }
+
+.tool-name{
+  width: 100%;
+  flex-direction: column;
+}
+
+.tools{
+  width: 30%;
+  height: auto;
+  flex-direction: column;
+}
+
+.tools p{
+  padding: 0.5rem;
+  padding-left: 2rem;
+}
+
+
