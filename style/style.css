@@ -558,3 +558,142 @@ from{
 .project p{
   color: #AAAAAA;
 }
+
+.contact{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.contact h1{
+  color: #e60576;
+  font-style: italic;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.contact h3{
+  padding-left: 2rem;
+  color: #dfdede;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.form{
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.form input, textarea{
+  margin: 1.5rem 0;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #e60576;
+  width: 40%;
+  height: 50px;
+  font-size: 1.5rem;
+  color: #dfdede;
+  font-family: "Poppins", sans-serif;
+}
+
+.form textarea{
+  height: auto;
+}
+
+.form .send{
+  margin-top: 2rem;  
+  position: relative;
+  width: 150px;
+  height: 60px;
+  font-size: 1.5rem;
+  background-color: transparent;
+  /* border: 2px solid green; */
+  border: none;
+  padding: 0;
+  color: #fff;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.send span{
+  position: absolute;
+  width: 100%;
+  border-radius: 30px;
+  height: 5px;
+  background-color: #007ced;
+  transition: all 250ms ease-in-out;
+
+}
+
+.send span:nth-child(1){
+  background-color: #007ced;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.send span:nth-child(2){
+  background-color: #007ced;
+  /* top: 100%; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.send span:nth-child(3){
+  background-color: #E60576;
+  width: 40%;
+  height: 5px;
+  top: 50%;
+  bottom: 0;
+  left: 80%;
+  right: 0;
+}
+
+.send:hover span:nth-child(3){
+  background-color: #E60576;
+  width: 40%;
+  height: 5px;
+  top: 50%;
+  bottom: 0;
+  left: -20%;
+  right: 0;
+}
+
+.send:hover span:nth-child(1){
+  background-color: #007ced;
+  top: 90%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer{
+  text-align: center;
+  color: #AAAAAA;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.social-icon{
+  width: 70%;
+  height: 300px;
+  justify-content: space-evenly;
+
+}
+
+.social-icon .iconify{
+  font-size: 70px;
+  color: #007ced;
+}
+
+.social-icon .iconify:hover {
+  color: #AAAAAA;
+}
+
