@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root{
+  --primary-color : #007ced;
+  --primary-color-dark : #0056a7;
+  --secondary-color: #e60576;
+  --dark-color: #222222;
+  --darl-color-2: #333333;
+  --dark-color-3:#444444;
+  --light-color: #AAAAAA;
+  --light-color-2:#dfdede;
+  --high-color: #000;
+  --low-color: #fff; 
+}
+
+
+
+
+
+
+
+
+
 /* CSS Reset */
 * {
   margin: 0;
@@ -43,20 +64,16 @@ p {
   border: 1px solid white;
 }
 
-.start{
+.start, .end{
   text-align: left;
   width: 100%;
   /* margin-bottom: 1rem; */
-  color: #AAAAAA;
+  color: var(--light-color);
   font-size: 1.5rem;
 }
 
 .end{
   text-align: right;
-  width: 100%;
-  margin-top: 1rem;
-  color: #AAAAAA;
-  font-size: 1.5rem;
 }
 
 /* End */
@@ -67,13 +84,13 @@ p {
 /* Base Classes */
 
 body {
-  background-color: #007ced;
+  background-color: var(--primary-color);
   padding: 1rem 3rem;
   font-family: "Poppins", sans-serif;
 }
 
 .container {
-  background-color: #222222;
+  background-color: var(--dark-color);
   border-radius: 40px;
   width: 100%;
   height: auto;
@@ -93,7 +110,7 @@ body {
   position: relative;
   z-index: 1;
   flex-direction: column;
-  color: #fff;
+  color: var(--low-color);
   
 }
 
@@ -116,7 +133,7 @@ body {
   content: "Hi I Am";
   top: -30px;
   font-size: 2.5rem;
-  color: #AAAAAA;
+  color: var(--light-color);
   bottom: 0;
   right: 0;
   left: 0;
@@ -147,11 +164,11 @@ body {
 .glow-line{
   width: 4px;
   height: 500px;
-  background-color: #007ced;
+  background-color: var(--primary-color);
   border-radius: 20px;
   margin: 0 3rem;
   transform: rotate(25deg);
-  box-shadow: 0px 0px 15px 2px #007CED;
+  box-shadow: 0px 0px 15px 2px var(--primary-color);
   transition: all 250ms ease-in;
   animation: updown 1s linear 1 alternate-reverse;
 }
@@ -159,14 +176,14 @@ body {
 
 .glow-line1, .glow-line5{
   height: 200px;
-  background-color: #007ced;
-  box-shadow: 0px 0px 15px 2px #007ced;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 15px 2px var(--primary-color);
 }
 
 .glow-line2, .glow-line4{
   height: 350px;
-  background-color: #e60576;
-  box-shadow: 0px 0px 15px 2px #e60576;
+  background-color: var(--secondary-color);
+  box-shadow: 0px 0px 15px 2px var(--secondary-color);
 }
 
 .glowhover{
@@ -214,7 +231,7 @@ from{
 
 .picture img{
   width: 350px;
-  border: 4px solid #007ced;
+  border: 4px solid var(--primary-color);
   border-radius: 50%;
   padding: 1.5rem;
 }
@@ -228,27 +245,27 @@ from{
   align-items: flex-start;
   justify-content: flex-start;
   padding: 2rem;
-  border: 4px solid #E60576;
-  background-color: #333333;
+  border: 4px solid var(--secondary-color);
+  background-color: var(--darl-color-2);
   z-index: 5;
 }
 
 .details h2{
   font-size: 2rem;
-  color: #007CED;
+  color: var(--primary-color);
 }
 
 .details h4{
   margin-top: 0.5rem;
   font-size: 1.5rem;
   font-weight: 400;
-  color: #fff;
+  color: var(--primary-color);
 }
 
 .details p{
   font-size: 1.2rem;
   font-weight: 400;
-  color: #AAAAAA;
+  color: var(--light-color);
 }
 
 .social-media{
@@ -262,7 +279,7 @@ from{
 .social-media .iconify{
   width: 40px;
   height: 40px;
-  color: #e60576;
+  color: var(--secondary-color);
   cursor: pointer;
   transition: all 250ms ease-in-out;
 }
@@ -277,21 +294,21 @@ from{
   margin-top: -70px;
   width: 45%;
   max-width: 600px;
-  border: 4px solid #007CED;
+  border: 4px solid var(--primary-color);
   height: 350px;
   padding: 0.5rem 2rem;
 
 }
 
 .introducation h1{
-  color: #007ced;
+  color: var(--primary-color);
   font-size: 2.5rem;
   text-align: left;
 }
 
 
 .introducation p{
-  color: #AAAAAA;
+  color: var(--light-color);
   font-size: 1.3rem;
 }
 
@@ -305,15 +322,15 @@ from{
   padding: 1.5em;
   width: 200px;
   text-align: center;
-  background-color: #007ced;
+  background-color: var(--primary-color);
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--low-color);
   transition: all 250ms ease-in-out;  
 }
 
 .button:hover{
-  background-color: #0056a7;
-  color: #AAAAAA;
+  background-color: var(--primary-color-dark);
+  color: var(--light-color);
 }
 
 .education{
@@ -327,7 +344,7 @@ from{
   width: 100%;
   padding: 0;
   font-weight: 300;
-  color: #fff;
+  color: var(--low-color);
   line-height: 100%;
   margin-bottom: 1rem;
 }
@@ -345,19 +362,19 @@ from{
   height: auto;
   padding: 1rem;
   text-align: left;
-  border-left : 1px solid white;
-  border-bottom : 1px solid white;
+  border-left : 1px solid var(--low-color);
+  border-bottom : 1px solid var(--low-color);
 }
 
 .colleages .row h2{
   font-size: 2.2rem;
-  color: #fff;
+  color: var(--low-color);
   font-weight: 600;
 }
 
 .colleages .row h5{
   font-size: 1.2rem;
-  color: #AAAAAA;
+  color: var(--light-color);
   font-weight: 400;
   line-height: 15%;
   margin-bottom: 1.5rem;
@@ -365,13 +382,13 @@ from{
 
 .colleages .row h3{
   font-size: 1.5rem;
-  color: #007ced;
+  color: var(--primary-color);
   font-weight: 600;
 }
 
 .colleages .row p{
   font-size: 1.2rem;
-  color: #AAAAAA;
+  color: var(--light-color);
   font-weight: 400;
   line-height: 150%;
 }
@@ -383,14 +400,14 @@ from{
 }
 
 .location .iconify{
-  color: #0056a7;
+  color: var(--primary-color-dark);
   width: 30px;
   height: 30px;
   margin: 0 0.5rem;
 }
 
 .location p{
-  color: #0056a7 !important; 
+  color: var(--primary-color-dark) !important; 
   font-size: 1.2rem !important;
 }
 
@@ -415,7 +432,7 @@ from{
 
 
 .skils h2{
-  color: #007ced;
+  color: var(--primary-color);
   text-align: left;
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -426,7 +443,7 @@ from{
 .columns{
   width: 100%;
   height: 100%;
-  border-left: 1px solid #fff;
+  border-left: 1px solid var(--low-color);
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -450,7 +467,7 @@ from{
 
 .skil-name p, .tools p{
   font-size: 1.4rem;
-  color: #dfdede
+  color: var(--light-color-2);
  }
 
 .skil-rating{
@@ -459,7 +476,7 @@ from{
 
 .skil-rating .iconify{
   font-size: 2rem;
-  color: #dfdede;
+  color: var(--light-color-2);
   margin:0 0.2rem;
 }
 
@@ -508,17 +525,17 @@ from{
 .feature .iconify{
   margin: 0.5rem;
   font-size: 50px;
-  color: #007ced;
+  color: var(--primary-color);
 }
 
 .feature h3{
   font-size: 1.5rem;
-  color: #007ced;
+  color: var(--primary-color);
 }
 
 .feature p{
   font-size: 1rem;
-  color: #AAAAAA;
+  color: var(--light-color);
 }
 
 .projects{
@@ -533,30 +550,30 @@ from{
   margin: 2rem;
   width: 300px;
   height: 400px;
-  background-color: #444444;
+  background-color: var(--dark-color-3);
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
   padding: 20px;
   text-align: center;
   cursor: pointer;
-  box-shadow: 0px 0px 20px -4px black;
+  box-shadow: 0px 0px 20px -4px var(--high-color);
 
 }
 
 .project .project-picture img{
   width: 250px;
   height: 250px;
-  box-shadow: 0px 0px 20px -4px black;
+  box-shadow: 0px 0px 20px -4px var(--high-color);
 
 }
 
 .project h2{
-  color: #dfdede;
+  color: var(--light-color-2);
 }
 
 .project p{
-  color: #AAAAAA;
+  color: var(--light-color);
 }
 
 .contact{
@@ -566,7 +583,7 @@ from{
 }
 
 .contact h1{
-  color: #e60576;
+  color: var(--secondary-color);
   font-style: italic;
   font-size: 2rem;
   padding: 2rem;
@@ -574,7 +591,7 @@ from{
 
 .contact h3{
   padding-left: 2rem;
-  color: #dfdede;
+  color: var(--light-color-2);
   font-size: 2rem;
   font-weight: normal;
 }
@@ -593,11 +610,11 @@ from{
   outline: none;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #e60576;
+  border-bottom: 2px solid var(--secondary-color);
   width: 40%;
   height: 50px;
   font-size: 1.5rem;
-  color: #dfdede;
+  color: var(--light-color-2);
   font-family: "Poppins", sans-serif;
 }
 
@@ -615,7 +632,7 @@ from{
   /* border: 2px solid green; */
   border: none;
   padding: 0;
-  color: #fff;
+  color: var(--low-color);
   cursor: pointer;
   transition: all 250ms ease-in-out;
 }
@@ -625,13 +642,13 @@ from{
   width: 100%;
   border-radius: 30px;
   height: 5px;
-  background-color: #007ced;
+  background-color: var(--primary-color);
   transition: all 250ms ease-in-out;
 
 }
 
 .send span:nth-child(1){
-  background-color: #007ced;
+  background-color: var(--primary-color);
   top: 0;
   bottom: 0;
   left: 0;
@@ -639,7 +656,7 @@ from{
 }
 
 .send span:nth-child(2){
-  background-color: #007ced;
+  background-color: var(--primary-color);
   /* top: 100%; */
   bottom: 0;
   left: 0;
@@ -647,7 +664,7 @@ from{
 }
 
 .send span:nth-child(3){
-  background-color: #E60576;
+  background-color: var(--secondary-color);
   width: 40%;
   height: 5px;
   top: 50%;
@@ -657,7 +674,7 @@ from{
 }
 
 .send:hover span:nth-child(3){
-  background-color: #E60576;
+  background-color: var(--secondary-color);
   width: 40%;
   height: 5px;
   top: 50%;
@@ -667,7 +684,7 @@ from{
 }
 
 .send:hover span:nth-child(1){
-  background-color: #007ced;
+  background-color: var(--primary-color);
   top: 90%;
   bottom: 0;
   left: 0;
@@ -676,7 +693,7 @@ from{
 
 .footer{
   text-align: center;
-  color: #AAAAAA;
+  color: var(--light-color);
   flex-direction: column;
   margin-bottom: 0.5rem;
 }
@@ -690,10 +707,10 @@ from{
 
 .social-icon .iconify{
   font-size: 70px;
-  color: #007ced;
+  color: var(--light-color);
 }
 
 .social-icon .iconify:hover {
-  color: #AAAAAA;
+  color: var(--light-color);
 }
 
