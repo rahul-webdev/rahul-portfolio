@@ -95,6 +95,7 @@ body {
   width: 100%;
   height: auto;
   padding: 2rem;
+  position: relative;
 }
 
 
@@ -147,8 +148,6 @@ body {
   padding: 0;
   
 }
-
-
 
 
 .glow-ani{
@@ -268,6 +267,7 @@ from{
   color: var(--light-color);
 }
 
+
 .social-media{
   margin-top: 0.5rem;
   width: 80%;
@@ -276,19 +276,52 @@ from{
 
 }
 
+.iconbg{
+  position: relative;
+  z-index: 4;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: all 250ms ease-in-out;
+}
+
 .social-media .iconify{
   width: 40px;
   height: 40px;
   color: var(--secondary-color);
   cursor: pointer;
   transition: all 250ms ease-in-out;
+  /* position: relative; */
 }
 
-.social-media .iconify:hover{
-  color: #007ced;
-  transition: all 250ms ease-in-out;
-  transform: scale(1.5);
+
+
+
+.iconbgani{
+    top: 0;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
 }
+
+
+
+
+.iconbg:hover .iconbgani{
+  background-color: var(--secondary-color) ;
+  width: 100%;
+  height: 100%;
+}
+
+
+.iconbg:hover > .iconify{
+  color: var(--light-color);
+  transition: all 250ms ease-in-out;
+  transform: scale(1.2);
+}
+
 
 .introducation{
   margin-top: -70px;
@@ -368,7 +401,7 @@ from{
 
 .colleages .row h2{
   font-size: 2.2rem;
-  color: var(--low-color);
+  color: var(--light-color-2);
   font-weight: 600;
 }
 
@@ -463,6 +496,34 @@ from{
 .skil-name, .tool-name {
   width: 40%;
  padding-left: 2rem;
+ position: relative;
+ overflow: hidden;
+ z-index: 2;
+}
+
+
+.skil-name::after, .tool-name::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0056a7;
+  transform: translateX(-110%);
+  transition: all 300ms ease-in;
+  z-index: -1;
+}
+
+.skil-info:hover .skil-name:after{
+  transform: translateX(-10%);
+}
+
+
+.skil-info:hover  .iconify{
+  color: var(--primary-color);
 }
 
 .skil-name p, .tools p{
@@ -477,6 +538,7 @@ from{
 .skil-rating .iconify{
   font-size: 2rem;
   color: var(--light-color-2);
+  transition: all 300ms ease-in;
   margin:0 0.2rem;
 }
 
@@ -605,90 +667,92 @@ from{
   align-items: flex-start;
 }
 
-.form input, textarea{
-  margin: 1.5rem 0;
-  outline: none;
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid var(--secondary-color);
+.input-animation{
+  position: relative;
+  flex-direction: column;
   width: 40%;
-  height: 50px;
+  height: 80px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.form input, textarea{
+border: none;
+background-color: transparent;
+height: 100%;
+ width: 100%;
+ border-bottom: 2px solid var(--secondary-color);
+ font-size: 1.4rem;
+ padding-top: 2rem;
+ color: var(--light-color-2);
+ font-family: "Poppins", sans-serif;
+}
+
+.text-area{
+  height: 120px;
+}
+
+textarea{
+height: 100px;
+outline: none;
+padding-top: 50px;
+}
+
+.input-animation label{
+  pointer-events: none;
+  position: absolute;
   font-size: 1.5rem;
   color: var(--light-color-2);
   font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
 }
 
-.form textarea{
-  height: auto;
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
 }
 
-.form .send{
-  margin-top: 2rem;  
-  position: relative;
-  width: 150px;
-  height: 60px;
-  font-size: 1.5rem;
-  background-color: transparent;
-  /* border: 2px solid green; */
-  border: none;
-  padding: 0;
+.form input:focus{
+  outline: none;
+}
+
+
+.input-animation input:focus + .label-name .content-name,
+.input-animation input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  left: 0px;
+  color: var(--primary-color);
+}
+
+.input-animation textarea:focus + .label-name .content-name,
+.input-animation textarea:valid + .label-name .content-name {
+  transform: translateY(-280%);
+  font-size: 14px;
+  left: 0px;
+  color: var(--primary-color);
+}
+
+.submit{
+  background-color: var(--primary-color);
   color: var(--low-color);
+  font-size: 1.2rem;
+  border: none;
+  margin-top: 2rem;
+  padding: 1em 2em;
   cursor: pointer;
   transition: all 250ms ease-in-out;
 }
 
-.send span{
-  position: absolute;
-  width: 100%;
-  border-radius: 30px;
-  height: 5px;
-  background-color: var(--primary-color);
-  transition: all 250ms ease-in-out;
-
-}
-
-.send span:nth-child(1){
-  background-color: var(--primary-color);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.send span:nth-child(2){
-  background-color: var(--primary-color);
-  /* top: 100%; */
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.send span:nth-child(3){
-  background-color: var(--secondary-color);
-  width: 40%;
-  height: 5px;
-  top: 50%;
-  bottom: 0;
-  left: 80%;
-  right: 0;
-}
-
-.send:hover span:nth-child(3){
-  background-color: var(--secondary-color);
-  width: 40%;
-  height: 5px;
-  top: 50%;
-  bottom: 0;
-  left: -20%;
-  right: 0;
-}
-
-.send:hover span:nth-child(1){
-  background-color: var(--primary-color);
-  top: 90%;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.submit:hover{
+  background-color: var(--primary-color-dark);
+  color: var(--light-color-2);
 }
 
 .footer{
@@ -700,8 +764,10 @@ from{
 
 .social-icon{
   width: 70%;
-  height: 300px;
+  height: 200px;
   justify-content: space-evenly;
+  margin-bottom: 3rem;
+  margin-top: -3rem;
 
 }
 
@@ -714,3 +780,48 @@ from{
   color: var(--light-color);
 }
 
+
+.footericon{
+  width: 150px;
+  height: 150px;
+  align-items: flex-end;
+  transition: all 300ms ease-in;
+  padding-bottom: 0.5rem;
+  border-bottom: 0rem solid #0056a7;
+}
+
+.footericon:hover{
+  padding-bottom: 1rem;
+  border-bottom: 3rem solid #0056a7;
+}
+
+.menu{
+  z-index: 99999999;
+  position: fixed;
+  width: 120px;
+  height: auto;
+  /* background-color: #dfdede; */
+  top: 35%;
+  right: 3rem;
+}
+
+.menu ul{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.menu ul li, a{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.menu ul li:hover{
+  background-color: #dfdede;
+}

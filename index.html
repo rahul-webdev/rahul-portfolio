@@ -10,8 +10,8 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="head f-center">
+    <div class="container" id="Home">
+      <div class="head f-center" >
         <div class="glow-ani f-center">
           <div class="glow-line glow-line1"></div>
           <div class="glow-line glow-line2"></div>
@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="profile f-center">
+      <div class="profile f-center" id="profile">
         <span class="start">&ltProfile&gt</span>
         <div class="row row1 f-center">
           <div class="picture f-center">
@@ -40,19 +40,15 @@
             <h4>Location :</h4>
             <p>Ahemdabad, Gujarat</p>
 
-            <div class="social-media f-center">
-              <span class="iconify" data-icon="akar-icons:whatsapp-fill"></span>
-              <span
-                class="iconify"
-                data-icon="akar-icons:instagram-fill"
-              ></span>
-              <span class="iconify" data-icon="akar-icons:github-fill"></span>
-              <span
-                class="iconify"
-                data-icon="akar-icons:linkedin-box-fill"
-              ></span>
-              <span class="iconify" data-icon="akar-icons:codepen-fill"></span>
-              <span class="iconify" data-icon="mdi:gmail"></span>
+            <div class="social-media f-center ">
+                
+                <a class="iconbg f-center" href="http://"><span class="iconbgani"></span> <span class="iconify " data-icon="akar-icons:whatsapp-fill"></span></a>
+
+              <a class="iconbg f-center" href="http://"><span class="iconbgani"></span> <span class="iconify" data-icon="akar-icons:instagram-fill"></span></a>
+              <a class="iconbg f-center" href="http://"><span class="iconbgani"></span> <span class="iconify" data-icon="akar-icons:github-fill"></span></a>
+              <a class="iconbg f-center" href="http://"><span class="iconbgani"></span> <span class="iconify" data-icon="akar-icons:linkedin-box-fill"></span></a>
+              <a class="iconbg f-center" href="http://"><span class="iconbgani"></span> <span class="iconify" data-icon="akar-icons:codepen-fill"></span></a>
+              <a class="iconbg f-center" href="http://"><span class="iconbgani"></span> <span class="iconify" data-icon="mdi:gmail"></span></a>
             </div>
           </div>
         </div>
@@ -77,7 +73,7 @@
         <span class="end">&lt/Profile&gt</span>
       </div>
 
-      <div class="education f-center">
+      <div class="education f-center" id="Education">
         <span class="start">&ltEducation&gt</span>
         <span class="section-title">Education</span>
 
@@ -134,7 +130,7 @@
         <span class="end">&lt/Education&gt</span>
       </div>
 
-      <div class="abilities f-center">
+      <div class="abilities f-center" id="Abilities">
         <span class="start">&ltAbilities&gt</span>
         <span class="section-title">Abilities</span>
         <div class="skils f-center">
@@ -752,7 +748,7 @@
 
 
       
-      <div class="projectsection f-center">
+      <div class="projectsection f-center" id="Projects">
         <span class="start">&ltProjects&gt</span>
         <span class="section-title">Projects</span>
         <div class="features f-center">
@@ -831,7 +827,7 @@
         <span class="end">&lt/Projects&gt</span>
       </div>
 
-      <div class="contact f-center">
+      <div class="contact f-center" id="Contact">
         <span class="start">&ltContact&gt</span>
         <span class="section-title">Contact</span>
 
@@ -839,17 +835,30 @@
         <h3>Alternatively, you can also drop-in a mail here!</h3>
 
         <form class="f-center form " action="" method="post">
-          <!-- <label for="name">Name:</label> -->
-          <input type="text" name="name" id="name" placeholder="Name">
 
-          <!-- <label for="e-mail">Name:</label> -->
-          <input type="email" name="e-mail" id="e-mail" placeholder="E-mail">
 
-          <!-- <label for="message">Name:</label> -->
-          <textarea name="message" id="message" cols="30" rows="3" placeholder="Message"></textarea>
-          
+          <div class="input-animation f-center">                        
+            <input type="text" name="name" required autocomplete="off">
+            <label for="name" class="label-name">
+              <span class="content-name">Name </span>
+            </label>
+          </div>
 
-          <button class="send f-center" type="submit">Submit<span></span> <span></span> <span></span> </button>
+          <div class="input-animation f-center">                        
+            <input type="email" name="e-mail" required autocomplete="off">
+            <label for="e-mail" class="label-name">
+              <span class="content-name">E-mail </span>
+            </label>
+          </div>
+
+          <div class="input-animation text-area f-center">                        
+            <textarea name="" id=""  required autocomplete="off"></textarea>
+            <label for="text" class="label-name">
+              <span class="content-name">Message </span>
+            </label>
+          </div>
+
+          <button class="submit">Submit</button>
         </form>
      
         <span class="end">&lt/Contact&gt</span>
@@ -861,19 +870,15 @@
 
       <div class="footer f-center">
   
-        <div class="social-icon f-center">
-          <span class="iconify" data-icon="akar-icons:whatsapp-fill"></span>
-          <span
-            class="iconify"
-            data-icon="akar-icons:instagram-fill"
-          ></span>
-          <span class="iconify" data-icon="akar-icons:github-fill"></span>
-          <span
-            class="iconify"
-            data-icon="akar-icons:linkedin-box-fill"
-          ></span>
-          <span class="iconify" data-icon="akar-icons:codepen-fill"></span>
-          <span class="iconify" data-icon="mdi:gmail"></span>
+        <div class="social-icon  f-center">
+    
+          <a class="footericon f-center" href="http://"><span class="iconify " data-icon="akar-icons:whatsapp-fill"></span></a>
+
+          <a class="footericon f-center" href="http://"><span class="iconify" data-icon="akar-icons:instagram-fill"></span></a>
+          <a class="footericon f-center" href="http://"><span class="iconify" data-icon="akar-icons:github-fill"></span></a>
+          <a class="footericon f-center" href="http://"><span class="iconify" data-icon="akar-icons:linkedin-box-fill"></span></a>
+          <a class="footericon f-center" href="http://"><span class="iconify" data-icon="akar-icons:codepen-fill"></span></a>
+          <a class="footericon f-center" href="http://"><span class="iconify" data-icon="mdi:gmail"></span></a>
         </div>
 
         <div class="footer">
@@ -895,6 +900,21 @@
 
 
 
+    <div class="menu b1">
+      <ul class="f-center">
+        <li><a href="#Home">Home</a></li>
+
+        <li><a href="#profile">Profile</a></li>
+
+        <li><a href="#Education">Experiences</a></li>
+          
+        <li><a href="#Abilities">Abilities</a></li>
+
+        <li><a href="#Projects">Projects</a></li>
+
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
 
     </div>
     <script src="/js/animation.js"></script>
